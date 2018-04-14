@@ -24,7 +24,5 @@ public class Llave extends EtapaMundial {
         }
         return sacachispas;
     }
-    
-    
-    
+
 }
