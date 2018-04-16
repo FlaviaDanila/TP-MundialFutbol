@@ -12,7 +12,7 @@ public class Llave extends EtapaMundial {
 @Override
     public List<Equipo> getEquiposQueAvanzan() {
         List<Equipo> parti2 = new ArrayList<>();
-        //Recorre la lista de partidos
+        //Recorre la lista de partidos y devuelve los equipos que pasan de ronda, sin empates
         for (Partido llave : super.getPartidos()) {
             if (llave.getResultado().ganoLocal()) {
                 parti2.add(llave.getLocal());

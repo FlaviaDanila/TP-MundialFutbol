@@ -22,7 +22,7 @@ public class TestMundialFutbol {
         Equipo santa = new Equipo();
         santa.setNombre("Santamarina");
         
-        Partido 1erPartido = new Partido( );
+        Partido.add(bada);
 
     }
 
