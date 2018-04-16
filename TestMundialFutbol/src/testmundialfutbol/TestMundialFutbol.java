@@ -10,18 +10,19 @@ public class TestMundialFutbol {
 
         System.out.println("Bienvenidos al Mundial de Fútbol");
 
-        Equipo badajoz = new Equipo();
-        badajoz.setNombre("Badajoz");
+        Equipo bada = new Equipo();
+        bada.setNombre("Badajoz");
 
-        Equipo sacachispas = new Equipo();
-        sacachispas.setNombre("Sacachispas");
+        Equipo sacachi = new Equipo();
+        sacachi.setNombre("Sacachispas");
 
-        Equipo elPorvenir = new Equipo();
-        elPorvenir.setNombre("ElPorvenir");
+        Equipo elPorve = new Equipo();
+        elPorve.setNombre("ElPorvenir");
 
-        Equipo santamarina = new Equipo();
-        santamarina.setNombre("Santamarina");
-
+        Equipo santa = new Equipo();
+        santa.setNombre("Santamarina");
+        
+        Partido 1erPartido = new Partido( );
 
     }
 
