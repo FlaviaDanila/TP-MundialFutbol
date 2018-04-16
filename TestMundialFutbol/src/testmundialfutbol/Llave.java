@@ -10,20 +10,19 @@ import java.util.List;
  */
 public class Llave extends EtapaMundial {
 
-    @Override
+@Override
     public List<Equipo> getEquiposQueAvanzan() {
-        List<Equipo> equipos = new ArrayList<>();
-        //Recorre la lista de equipos
-        for (Iterator<Equipo> iter = this.getEquiposQueAvanzan().iterator(); iter.hasNext();) {
-            Equipo llave = iter.next();
+        List<Equipo> parti2 = new ArrayList<>();
+        //Recorre la lista de partidos
+        for (Partido llave : super.getPartidos()) {
             if (llave.getResultado().ganoLocal()) {
-                equipos.add(llave.getLocal());
+                parti2.add(llave.getLocal());
             }
-            if (!llave.getResultado().ganoLocal() && !llave.getResultado().empate()) {
-                equipos.add(llave.getVisitante());
+            if (llave.getResultado().ganoVisitante()) {
+                parti2.add(llave.getVisitante());
             }
         }
-        return equipos;
+        return parti2;
     }
 
 }

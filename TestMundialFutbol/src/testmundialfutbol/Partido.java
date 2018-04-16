@@ -10,10 +10,6 @@ import java.util.Date;
 
 public class Partido {
 
-    static void add(Equipo sacachispas) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
     //Variables
     private Date fecha;
     private Equipo local;

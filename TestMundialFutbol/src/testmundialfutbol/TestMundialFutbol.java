@@ -22,10 +22,6 @@ public class TestMundialFutbol {
         Equipo santamarina = new Equipo();
         santamarina.setNombre("Santamarina");
 
-        Partido.add(badajoz);
-        Partido.add(sacachispas);
-        Partido.add(elPorvenir);
-        Partido.add(santamarina);
 
     }
 

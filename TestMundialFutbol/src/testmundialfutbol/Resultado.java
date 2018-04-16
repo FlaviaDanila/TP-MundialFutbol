@@ -11,9 +11,8 @@ public class Resultado {
     private int golesVisitante;
 
     //Constructor
-    public Resultado(int golesLocal, int golesVisitante) {
-        this.golesLocal = golesLocal;
-        this.golesVisitante = golesVisitante;
+    public Resultado() {
+        
     }
     
     //Obtiene los goles del local
@@ -32,15 +31,23 @@ public class Resultado {
         this.golesVisitante = golesVisitante;
     }
 
-    //Considera que si el equipo local gana retorna un true, por descarte false
+    //Si el equipo local gana retorna un true, sino false
     public boolean ganoLocal() {
         if (this.golesLocal > this.golesVisitante) {
             return true;
         }
         return false;
     }
+    
+    //Si el equipo visitante gana retorna un true, sino false
+    public boolean ganoVisitante() {
+        if (this.golesVisitante > this.golesLocal) {
+            return true;
+        }
+        return false;
+    }
 
-    //Considera que si los equipos empatan retorna un true, por descarte false
+    //Si los equipos empatan retorna un true, sino false
     public boolean empate() {
         if (this.golesLocal == this.golesVisitante) {
             return true;

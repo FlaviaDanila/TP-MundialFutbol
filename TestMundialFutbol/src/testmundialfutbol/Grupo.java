@@ -1,7 +1,6 @@
 package testmundialfutbol;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -10,17 +9,33 @@ import java.util.List;
  */
 public class Grupo extends EtapaMundial {
 
-    
+    private int puntos(Equipo unEquipo) {
+        int puntos = 0;
+        //Recorre la lista de partidos
+        for (Partido partidos : unEquipo.getPartidosJugados()) {
+            if (partidos.getResultado().ganoLocal() && unEquipo.equals(partidos.getLocal())) {
+                puntos += 3;
+
+            }
+            if (partidos.getResultado().ganoVisitante() && unEquipo.equals(partidos.getVisitante())) {
+                puntos += 3;
+            }
+            if (partidos.getResultado().empate()) {
+                puntos += 1;
+            }
+        }
+        return puntos;
+    }
+
     @Override
     public List<Equipo> getEquiposQueAvanzan() {
         List<Equipo> parti2 = new ArrayList<>();
         //Recorre la lista de partidos
-        for (Iterator<Partido> iter = super.getPartidos().iterator(); iter.hasNext();) {
-            Partido grupo = iter.next();
-            if (grupo.getResultado().ganoLocal()) {
+        for (Partido grupo : super.getPartidos()) {
+            if (puntos(grupo.getLocal()) > puntos(grupo.getVisitante())) {
                 parti2.add(grupo.getLocal());
             }
-            if (!grupo.getResultado().ganoLocal() && !grupo.getResultado().empate()) {
+            if (puntos(grupo.getVisitante()) > puntos(grupo.getLocal())) {
                 parti2.add(grupo.getVisitante());
             }
         }
