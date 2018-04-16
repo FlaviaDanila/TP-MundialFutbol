@@ -12,17 +12,18 @@ public class Llave extends EtapaMundial {
 
     @Override
     public List<Equipo> getEquiposQueAvanzan() {
-        List<Equipo> sacachispas = new ArrayList<>();
+        List<Equipo> equipos = new ArrayList<>();
+        //Recorre la lista de equipos
         for (Iterator<Equipo> iter = this.getEquiposQueAvanzan().iterator(); iter.hasNext();) {
-            Equipo llaveA = iter.next();
-            if (llaveA.getResultado().ganoLocal()) {
-                sacachispas.add(llaveA.getLocal());
+            Equipo llave = iter.next();
+            if (llave.getResultado().ganoLocal()) {
+                equipos.add(llave.getLocal());
             }
-            if (!llaveA.getResultado().ganoLocal() && !llaveA.getResultado().empate()) {
-                sacachispas.add(llaveA.getVisitante());
+            if (!llave.getResultado().ganoLocal() && !llave.getResultado().empate()) {
+                equipos.add(llave.getVisitante());
             }
         }
-        return sacachispas;
+        return equipos;
     }
 
 }

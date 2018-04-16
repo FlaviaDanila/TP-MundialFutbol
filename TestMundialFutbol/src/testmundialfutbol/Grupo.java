@@ -10,19 +10,21 @@ import java.util.List;
  */
 public class Grupo extends EtapaMundial {
 
+    
     @Override
     public List<Equipo> getEquiposQueAvanzan() {
-        List<Equipo> badajoz = new ArrayList<>();
+        List<Equipo> parti2 = new ArrayList<>();
+        //Recorre la lista de partidos
         for (Iterator<Partido> iter = super.getPartidos().iterator(); iter.hasNext();) {
-            Partido serieA = iter.next();
-            if (serieA.getResultado().ganoLocal()) {
-                badajoz.add(serieA.getLocal());
+            Partido grupo = iter.next();
+            if (grupo.getResultado().ganoLocal()) {
+                parti2.add(grupo.getLocal());
             }
-            if (!serieA.getResultado().ganoLocal() && !serieA.getResultado().empate()) {
-                badajoz.add(serieA.getVisitante());
+            if (!grupo.getResultado().ganoLocal() && !grupo.getResultado().empate()) {
+                parti2.add(grupo.getVisitante());
             }
         }
-        return badajoz;
+        return parti2;
     }
 
 }
