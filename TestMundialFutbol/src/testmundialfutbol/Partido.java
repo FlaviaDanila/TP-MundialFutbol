@@ -17,11 +17,10 @@ public class Partido {
     private Resultado resultado;
     
     //Constructor
-    public Partido(Date fecha, Equipo local, Equipo visitante, int golesLocal, int golesVisitante) {
+    public Partido(Date fecha, Equipo local, Equipo visitante) {
         this.fecha = fecha;
         this.local = local;
         this.visitante = visitante;
-        this.resultado.setResultado(golesLocal, golesVisitante);
     }
     
     //Obtiene el resultado

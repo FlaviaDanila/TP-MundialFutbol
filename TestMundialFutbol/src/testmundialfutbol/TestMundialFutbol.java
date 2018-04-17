@@ -1,5 +1,7 @@
 package testmundialfutbol;
 
+import java.util.Date;
+
 /**
  *
  * @author Yaki's
@@ -22,8 +24,9 @@ public class TestMundialFutbol {
         Equipo santa = new Equipo();
         santa.setNombre("Santamarina");
         
-        Partido.add(bada);
-
+        Partido primerPartido = new Partido(new Date(), bada, santa);
+        
+        
     }
 
 }
