@@ -38,4 +38,7 @@ public class Partido {
         return this.visitante;
     }
      
+    public String toString() {
+        return "El partido se jugará el "+ this.fecha + " entre " + local + "vs." + visitante;
+    }
 }
