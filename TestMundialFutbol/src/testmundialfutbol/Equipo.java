@@ -60,4 +60,9 @@ public class Equipo {
         return diferenciaDeGoles;
     }
 
+    @Override
+    public String toString() {
+        return nombre;
+    }
+    
 }

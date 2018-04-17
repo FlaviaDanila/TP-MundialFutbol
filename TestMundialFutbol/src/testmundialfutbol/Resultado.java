@@ -11,8 +11,9 @@ public class Resultado {
     private int golesVisitante;
 
     //Constructor
-    public Resultado() {
-        
+    public Resultado(int golesLocal, int golesVisitante) {
+        this.golesLocal = golesLocal;
+        this.golesVisitante = golesVisitante;
     }
     
     //Obtiene los goles del local
@@ -55,4 +56,10 @@ public class Resultado {
         return false;
     }
 
+    @Override
+    public String toString() {
+        String golesL = String.valueOf(golesLocal);
+        String golesV = String.valueOf(golesVisitante);
+        return "Resultado: " + golesL + "-" + golesV;
+    }
 }

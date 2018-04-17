@@ -38,7 +38,8 @@ public class Partido {
         return this.visitante;
     }
      
+    @Override
     public String toString() {
-        return "El partido se jugará el "+ this.fecha + " entre " + local + "vs." + visitante;
+        return "El partido se jugará el "+ this.fecha + " entre " + this.local + " Vs. " + this.visitante;
     }
 }
